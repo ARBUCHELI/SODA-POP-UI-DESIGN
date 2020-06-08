@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); /*Used to import Montserrat Google fonts*/
+body {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden; /*The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.*/
+	/*overflow: hidden (The overflow is clipped, and the rest of the content will be visible)*/
+	background-color: #AFEEEE; /*Background color behind the cards*/
+	display: flex; /*A flex container becomes flexible*/
+	align-items: center; /*To position the cards in the center*/
+	justify-content: center; /*To justify content*/
+	font-family: 'Montserrat', sans-serif; /*Type of letter of the content*/
+}
+.cocacoladesign, /*Selection of the two cards*/
+.pepsidesign {
+	width: 340px;
+	height: 550px;
+	background-color: #fff; /*Background color of the cards*/
+	border-radius: 30px; /*Rounding the border of the cards*/
+	position: absolute; /*An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
+	left: 20%;
+	overflow: hidden;
+	z-index: 0; /*Specifies the stack order of an element*/
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+	transition: .5s; /*The animation when the page is loaded for first time*/
+}
+.cocacoladesign {
+	background-color: #fff;
+}
+.cocacoladesign:hover {
+	margin-top: -30px; /*Moves the first card 30 px up when hovering with the mouse*/
+	box-shadow: 0 30px 50px black;
+}
+.pepsidesign:hover{ /*Moves the second card 30 px down when hovering with the mouse*/
+	margin-top: 30px;
+	box-shadow: 0 -30px 50px black;
+}
+.pepsidesign {
+	left: 50%; /*Distance create at the left of the second card*/
+}
+.cocacoladesign:before {
+  content: ''; /*Inserts content (space)*/
+	position: absolute;
+	top: -25%; 
+	left: 0;
+	width: 100%;
+	height: 90%;
+	background: linear-gradient(160deg, #800000, #A52A2A); /*Color degradation of background from initial color to final*/
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	transform: skewY(-10deg); /*Turn the background ten degrees clockwise*/
+	z-index: -1;
+} /*In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.*/
+.pepsidesign:before {
+	content: ''; /*Inserts content (space)*/
+	position: absolute;
+	top: -25%; 
+	left: 0;
+	width: 100%;
+	height: 90%;
+	background: linear-gradient(160deg, #191970, #4682B4); /*Color degradation of background from initial color to final*/
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	transform: skewY(-10deg); /*Turn the background ten degrees clockwise*/
+	z-index: -1;
+}
+.pepsidesign:before {
+	background: linear-gradient(160deg, #191970 50%, #4682B4); /*Color degradation of background from initial color to final*/
+}
+/*Configuration of the logo*/
+.pepssi:before{
+	left: 55%;
+}
+.logo {
+	width: 35%;
+}
+.pepsilogo {
+	width: 30%;
+}
+.logo img {
+	margin: 0px 15px;
+	width: 100%;
+	color: white;
+}
+.pepsilogo img{
+	margin: 0px 15px;
+	width: 100%;
+	color: white;
+}
+.pepsilogo img {
+	margin: 5px;
+}
+/*Configuration of the hamburger menu*/
+.hamburger {
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	border-radius: 50%; /*Circle that holds the hamburguer menu*/
+	position: absolute;
+	top: 2%;
+	right: 8%;
+}
+.hamburger span:nth-child(1), /*To create three lines for the menu hamburger*/
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+	width: 45%; /*Lenght of the lines*/
+	position: absolute;
+	left: 27%;
+	top: 37%;
+	height: 2px;
+	background-color: black; /*Color of the lines*/
+	text-align: center;
+	border-radius: 15px;
+}
+.hamburger span:nth-child(2){
+	top: 62%; /*Distance of the lines*/
+}
+.hamburger span:nth-child(3) {
+	top: 49%; /*Distance of the lines*/
+}
+.text { /*Configuration of the slogans*/
+	margin-left: 10px;
+	margin-top: 15px;
+	z-index: 10;
+}
+.text2 { /*Configuration of the slogans*/
+	margin-left: 10px;
+	z-index: 10;
+}
+.text p { /*Configuration of the slogans*/
+	font-size: 45px;
+	font-weight: bolder;
+	font-family: "Times New Roman";
+	font-style: normal;
+	text-align: center;
+	left: 200%;
+	color: white;
+	margin: 0;
+}
+.text2 p { /*Configuration of the slogans*/
+	font-size: 45px;
+  font-family: "Century Gothic";
+	line-height: 60px;
+  font-weight: bolder;
+	text-align: center;
+	margin-top: 1%;
+	margin-bottom: 13%;
+  color: white;
+}
+.cocacola,
+.pepsi { /*Configuration of position of the slogans*/
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+.cocacola { /*Configuration of position of the slogans*/
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+.cocacola img {
+	position: absolute;
+	width: 100%;
+	transform: rotate(0deg); /*Turn the shoes images 32 degrees clockwise*/
+}
+.cocacola img { /*Configuration of the nike image*/
+	width: 100%;
+	height: 100%;
+	bottom: 2%;
+	left: 1%;
+}
+.pepsi img {
+	position: absolute;
+	width: 100%;
+	transform: rotate(0deg); /*Turn the shoes images 32 degrees clockwise*/
+}
+.pepsi img { 
+	width: 100%;
+	height: 100%;
+	bottom: 10%;
+  margin-bottom: 50px;
+  margin-top: 20%;
+	left: 1%;
+}
+.price { /*Configuration of the prices*/
+	position: absolute;
+	bottom: 12%;
+	right: 3%;
+	line-height: 24px; /*Distance between the two prices*/
+	z-index: 3;
+}
+.price {
+	right: 70%;
+}
+/*Configuration of the prices*/
+.price h3 {
+	margin: 0;
+	font-size: 16px;
+	text-decoration: line-through;
+	color: #a3a2a2;
+	text-align: center;
+}
+.price h2 {
+	margin: 0;
+	color: 	#FF4500;
+	font-size: 35px;
+	text-align: center;
+}
+.price2 h2 {
+	color: #DC143C;
+}
+.button {
+	position: relative;
+	z-index: 5;
+	transition: 1s;
+}
+.button a {
+	position: absolute;
+	background: linear-gradient(to right, #FF8C00, 	#FF8C00 80%); /*Degradation of the color of the buttons*/
+	color: white; /*Color of the text inside the button*/
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 10px;
+	border-radius: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50%;
+	text-align: center;
+	font-weight: 100;
+	transition: 1s;
+}
+
+.button:hover a {
+	padding: 10px 21px;
+}
+.mens { /*Configuration of the final banner*/
+	position: absolute;
+	bottom: -1.3%;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%);
+	color: #9f9b9b;
+	font-size: 12px;
+	text-transform: uppercase;
+	z-index: 3;
+}
+.price2 { /*Configuration of the prices*/
+	position: absolute;
+	bottom: 15%;
+	right: 3%;
+	line-height: 24px; /*Distance between the two prices*/
+	z-index: 3;
+}
+.price2 h3 {
+	margin: 0;
+	font-size: 16px;
+	text-decoration: line-through;
+	color: #a3a2a2;
+	text-align: center;
+}
+.price2 h2 {
+	margin: 0;
+	color: 	#191970;
+	font-size: 35px;
+	text-align: center;
+}
+.price2 h2 {
+	color: #DC143C;
+}
+.button2 {
+	position: relative;
+	z-index: 5;
+	transition: 1s;
+}
+.button2 a {
+	position: absolute;
+  bottom: 45px;
+	background: linear-gradient(to right, #FF8C00, 	#FF8C00 80%); /*Degradation of the color of the buttons*/
+	color: white; /*Color of the text inside the button*/
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px 10px;
+	border-radius: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50%;
+	text-align: center;
+	font-weight: 100;
+	transition: 1s;
+}
+
+.button2 a {
+	background: linear-gradient(to right, #FF8C00, #FF8C00 80%); /*Degradation of the color of the buttons*/
+  bottom: 25px;
+}
+
+.button2:hover a {
+	padding: 10px 21px;
+}
+.mens2 { /*Configuration of the final banner*/
+	position: absolute;
+	bottom: -1.3%;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%);
+	color: #9f9b9b;
+	font-size: 12px;
+	text-transform: uppercase;
+	z-index: 3;
+}
+
